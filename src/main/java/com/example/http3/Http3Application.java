@@ -3,7 +3,7 @@ package com.example.http3;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.http.client.ReactorNettyClientRequestFactory;
+import org.springframework.http.client.ReactorClientHttpRequestFactory ;
 import org.springframework.web.client.RestClient;
 import reactor.netty.http.HttpProtocol;
 import reactor.netty.http.client.HttpClient;
@@ -28,7 +28,7 @@ public class Http3Application {
 								.maxData(10_000_000)
 								.maxStreamDataBidirectionalLocal(1_000_000));
 
-		return builder.requestFactory(new ReactorNettyClientRequestFactory(client)).build();
+		return builder.requestFactory(new ReactorClientHttpRequestFactory(client)).build();
 	}
 
 }

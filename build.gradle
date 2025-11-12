@@ -1,13 +1,13 @@
 plugins {
 	id 'java'
-	id 'org.springframework.boot' version '3.3.5'
-	id 'io.spring.dependency-management' version '1.1.6'
+	id 'org.springframework.boot' version '4.0.0-RC2'
+	id 'io.spring.dependency-management' version '1.1.7'
 }
 
 group = 'com.example'
 version = '0.0.1-SNAPSHOT'
 
-ext['reactor-bom.version'] = '2024.0.0'
+ext['reactor-bom.version'] = '2025.0.0'
 
 java {
 	toolchain {
@@ -20,9 +20,9 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.springframework.boot:spring-boot-starter-restclient'
 	implementation 'io.projectreactor.netty:reactor-netty-http'
-	runtimeOnly 'io.netty.incubator:netty-incubator-codec-http3:0.0.28.Final'
 }
 
 tasks.named('test') {

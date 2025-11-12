@@ -5,17 +5,9 @@
 ### Configure Reactor Netty version
 
 Bump `Reactor BOM` version in `build.gradle`
+(When `Spring Boot 4` is released there will be no need to bump the `Reactor BOM` version)
 ```properties
-ext['reactor-bom.version'] = '2024.0.0'
-```
-
-### Add dependency to Netty Http3 Codec
-
-In `build.gradle` add dependency to [netty-incubator-codec-http3](https://github.com/netty/netty-incubator-codec-http3)
-```properties
-dependencies {
-    runtimeOnly 'io.netty.incubator:netty-incubator-codec-http3:0.0.28.Final'
-}
+ext['reactor-bom.version'] = '2025.0.0'
 ```
 
 ### Configure SSL Bundle
