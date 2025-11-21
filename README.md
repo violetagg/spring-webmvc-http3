@@ -2,14 +2,6 @@
 
 ## Prerequisites
 
-### Configure Reactor Netty version
-
-Bump `Reactor BOM` version in `build.gradle`
-(When `Spring Boot 4` is released there will be no need to bump the `Reactor BOM` version)
-```properties
-ext['reactor-bom.version'] = '2025.0.0'
-```
-
 ### Configure SSL Bundle
 
 In `application.properties` add the `SSL` configuration
